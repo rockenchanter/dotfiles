@@ -7,11 +7,10 @@ alias ls='ls --color=auto'
 alias ta='tmux attach || tmux'
 alias mmo="sudo chown $USER:$USER -R ."
 alias poweroff='loginctl poweroff'
-alias shutdown='loginctl shutdown'
+alias reboot='loginctl reboot'
 alias unblock='sudo rfkill unblock all'
 
 PS1='\[\e[0;1m\][\[\e[93m\]\u@\[\e[95m\]\H] \[\e[94m\]\w \[\e[91m\]$(git branch 2>/dev/null | grep '"'"'^*'"'"' | colrm 1 2)\n$ \[\e[0m\]'
-# (cat ~/.cache/wal/sequences &)
 function fd() {
   local dir
   dir=$(find ${1:-.} -path '*/\.*' -prune \
@@ -38,5 +37,5 @@ function tl() {
 export EDITOR='nvim'
 export GPG_TTY=$(tty)
 if [ -z "${WAYLAND_DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
-  exec sway
+  exec dbus-run-session sway
 fi
