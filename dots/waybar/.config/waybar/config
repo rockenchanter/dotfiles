@@ -1,7 +1,7 @@
 {
     "modules-left": [ "sway/workspaces" ],
     "modules-right": [ "custom/chevron0", "pulseaudio", "custom/chevron1", "network", "custom/chevron2", "disk", "custom/chevron3","battery",  "custom/chevron4",  "clock" ],
-    "output": ["eDP-1"],
+    "output": ["eDP-1", "HDMI-A-1"],
     "spacing": 0,
     "margin": "0 0 0 0",
     "start_hidden": true,
@@ -34,7 +34,7 @@
 
     "disk": {
         "interval": 1800,
-        "format": "<span font='16' rise='-3000'></span>",
+        "format": "<span font='16' rise='-3000'></span> {free}",
         "path": "/home",
         "tooltip-format": "{free} available"
     },

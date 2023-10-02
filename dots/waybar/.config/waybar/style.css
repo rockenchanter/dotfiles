@@ -10,7 +10,7 @@
 
 
 window#waybar {
-    font-family: 'BlexMono Nerd Font Mono';
+    font-family: 'CaskaydiaCove Nerd Font Mono';
     font-size: 12px;
     background-color: @bg;
     color: @fg;

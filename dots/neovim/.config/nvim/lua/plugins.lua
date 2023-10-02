@@ -2,6 +2,7 @@ return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
     use 'ellisonleao/gruvbox.nvim'
+    use 'Mofiqul/vscode.nvim'
 
     use "tpope/vim-commentary" -- easier commenting
     use "tpope/vim-obsession"  -- session support
