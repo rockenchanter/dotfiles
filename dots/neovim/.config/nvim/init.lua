@@ -27,6 +27,7 @@ vim.g.mapleader = " "
 
 map("n", "<leader>r", ":so %<cr>", opts) -- source current vim/lua file
 map("n", "<leader>s", ":w<cr>", opts)	 -- save file
+map("n", "<leader>mm", ":make<cr>", opts)
 
 -- previous/next buffer
 map("n", "<s-tab>", ":bp<cr>", opts)

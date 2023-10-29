@@ -1,0 +1,10 @@
+[user]
+	name = Łukasz Flisak
+	email = lu.dev00@gmail.com
+	signingkey = 7FFEAC9EF4C6C007
+[commit]
+	gpgsign = true
+[tag]
+	gpgsign = true
+[init]
+	defaultBranch = master

@@ -4,7 +4,9 @@
 [[ $- != *i* ]] && return
 
 alias ls='ls --color=auto'
+alias lm='latexmk -pvc -pdf -jobname=./output/main main.tex'
 alias ta='tmux attach || tmux'
+alias tks='tmux kill-server'
 alias mmo="sudo chown $USER:$USER -R ."
 alias poweroff='loginctl poweroff'
 alias reboot='loginctl reboot'
@@ -34,6 +36,7 @@ function tl() {
   fi
 }
 
+export PATH="/usr/local/texlive/2023/bin/x86_64-linux:${PATH}"
 export EDITOR='nvim'
 export GPG_TTY=$(tty)
 if [ -z "${WAYLAND_DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then

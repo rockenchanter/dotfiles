@@ -38,6 +38,8 @@ input "*" {
 
 # Switch keyboard layout
 bindsym $mod+period input type:keyboard xkb_switch_layout next
+bindsym $mod+t layout stacking
+bindsym $mod+Shift+t layout toggle
 
 ### Key bindings
 # Screenshots
