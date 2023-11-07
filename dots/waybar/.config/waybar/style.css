@@ -3,7 +3,7 @@
 @define-color red #cc241d;
 @define-color green #98971a;
 @define-color yellow #d79921;
-@define-color blue #458588;
+@define-color blue #66cccc;
 @define-color purple #b16286;
 @define-color aqua #689d6a;
 @define-color orange #d65d0e;
@@ -12,34 +12,19 @@
 window#waybar {
     font-family: 'CaskaydiaCove Nerd Font Mono';
     font-size: 12px;
-    background-color: @bg;
+    background: transparent;
     color: @fg;
 }
 
-.modules-right {
-    color: @bg;
+.modules-left, .modules-center, .modules-right {
+    background-color: @bg;
+    border-radius: 15px;
 }
-
-#custom-chevron0 { color: @red; background-color: @bg;}
-#pulseaudio {
-    background-color: @red;
-}
-#custom-chevron1 { color: @orange; background-color: @red; }
-#network { background-color: @orange; }
-#custom-chevron2 { color: @yellow; background-color: @orange; }
-#disk { background-color: @yellow; }
-#custom-chevron3 { color: @green; background-color: @yellow; }
-#battery { background-color: @green; }
-#custom-chevron4 { color: @aqua; background-color: @green; }
-#clock { background-color: @aqua; }
 
 #workspaces button { margin: 0; padding: 0 10px; border-radius: 0; color: @fg }
-#workspaces button.focused { background-color: @blue; color: @bg;}
+#workspaces button.focused { color: @blue; font-weight: bold;}
 
-#battery, #pulseaudio, #network, #disk, #clock { padding: 0 10px; }
-
-@keyframes fade {
-    to {
-        color: @bg;
-    }
-}
+#battery, #pulseaudio, #network, #disk, #clock { padding: 0 8px; }
+#pulseaudio { padding-left: 16px; }
+#clock { padding: 0 16px; }
+#battery { padding-right: 16px; }

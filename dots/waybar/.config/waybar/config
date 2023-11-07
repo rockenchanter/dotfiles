@@ -1,36 +1,12 @@
 {
     "modules-left": [ "sway/workspaces" ],
-    "modules-right": [ "custom/chevron0", "pulseaudio", "custom/chevron1", "network", "custom/chevron2", "disk", "custom/chevron3","battery",  "custom/chevron4",  "clock" ],
+    "modules-center": [ "clock" ],
+    "modules-right": [ "pulseaudio", "network", "disk", "battery" ],
     "output": ["eDP-1", "HDMI-A-1"],
     "spacing": 0,
-    "margin": "0 0 0 0",
+    "margin": "10 10 0 10",
     "start_hidden": true,
     "ipc": true,
-
-    "custom/chevron0": {
-        "inverval": "once",
-        "format": "<span font='18' rise='-3000'></span>",
-    },
-
-     "custom/chevron1": {
-        "inverval": "once",
-        "format": "<span font='18' rise='-3000'></span>",
-     },
- 
-    "custom/chevron2": {
-        "inverval": "once",
-        "format": "<span font='18' rise='-3000'></span>",
-    },
- 
-    "custom/chevron3": {
-        "inverval": "once",
-        "format": "<span font='18' rise='-3000'></span>",
-    },
- 
-    "custom/chevron4": {
-        "inverval": "once",
-        "format": "<span font='18' rise='-3000'></span>",
-    },
 
     "disk": {
         "interval": 1800,
@@ -50,15 +26,7 @@
 
     "sway/workspaces": {
         "all-outputs": true,
-        "format": "{icon}",
-        "format-icons": {
-            "urgent": "<span font='16'></span>",
-            "1": "<span font='16'>󰈹</span>",
-            "2": "<span font='14'></span>",
-            "3": "<span font='14'></span>",
-            "4": "<span font='14'>󰎁</span>",
-            "5": "<span font='16'></span>",
-        },
+        "format": "{index}",
     },
 
     "battery": {

@@ -36,7 +36,6 @@ function tl() {
   fi
 }
 
-export PATH="/usr/local/texlive/2023/bin/x86_64-linux:${PATH}"
 export EDITOR='nvim'
 export GPG_TTY=$(tty)
 if [ -z "${WAYLAND_DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
