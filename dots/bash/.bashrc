@@ -3,6 +3,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+alias sb="source ~/.bashrc"
 alias ls='ls --color=auto'
 alias lm='latexmk -pvc -pdf -jobname=./output/main main.tex'
 alias ta='tmux attach || tmux'
@@ -11,6 +12,12 @@ alias mmo="sudo chown $USER:$USER -R ."
 alias poweroff='loginctl poweroff'
 alias reboot='loginctl reboot'
 alias unblock='sudo rfkill unblock all'
+
+# docker aliases
+alias dcp='docker container prune'
+alias dip='docker image prune'
+alias dri='docker image rm'
+alias dls='docker image ls'
 
 PS1='\[\e[0;1m\][\[\e[93m\]\u@\[\e[95m\]\H] \[\e[94m\]\w \[\e[91m\]$(git branch 2>/dev/null | grep '"'"'^*'"'"' | colrm 1 2)\n$ \[\e[0m\]'
 function fd() {
