@@ -49,12 +49,12 @@
             "warning": 35,
             "critical": 20
         },
-        "format": "{icon}",
+        "format": "{icon} {capacity}%",
         "tooltip-format": "{capacity}%"
     },
 
     "network": {
-        "format-wifi": "<span rise='-4000' font='18'>󰤪</span>",
+        "format-wifi": "<span rise='-4000' font='18'>󰤪</span> {essid}",
         "format-ethernet": "<span rise='-4000' font='18'>󰈀</span>",
         "format-disconnected": "<span rise='-4000' font='18'>󰌙</span>",
         "states": {
@@ -67,8 +67,7 @@
     },
 
     "clock": {
-        "format": "<span font='16' rise='-4000'></span> {:%H:%M}",
-        "format-alt": "<span font='16' rise='-4000'></span> {:%A, %B %d, %Y}",
+        "format": "<span font='16' rise='-4000'></span> {:%A, %B %d, %Y %H:%M}",
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
         "calendar": {
             "mode"          : "year",

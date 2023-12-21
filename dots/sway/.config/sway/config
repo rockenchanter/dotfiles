@@ -18,6 +18,12 @@ gaps inner 10
 smart_borders off
 smart_gaps off
 
+set $primary #996600
+set $active #d79c40
+set $background #1d2021
+set $foreground #ffffff
+client.focused $primary $background $foreground $active $primary
+
 #client.focused $color5 $background $foreground $color6 $color5
 #client.focused_inactive $background $background $foreground $background $background
 #client.unfocused $background $background $foreground $background $background

@@ -3,8 +3,8 @@
 @define-color red #cc241d;
 @define-color green #98971a;
 @define-color yellow #d79921;
-@define-color blue #66cccc;
-@define-color purple #b16286;
+@define-color blue #458588;
+@define-color purple #8f3f71;
 @define-color aqua #689d6a;
 @define-color orange #d65d0e;
 
@@ -18,13 +18,19 @@ window#waybar {
 
 .modules-left, .modules-center, .modules-right {
     background-color: @bg;
-    border-radius: 15px;
 }
-
-#workspaces button { margin: 0; padding: 0 10px; border-radius: 0; color: @fg }
-#workspaces button.focused { color: @blue; font-weight: bold;}
-
 #battery, #pulseaudio, #network, #disk, #clock { padding: 0 8px; }
-#pulseaudio { padding-left: 16px; }
-#clock { padding: 0 16px; }
-#battery { padding-right: 16px; }
+
+#workspaces button { margin: 0; padding: 0 10px; color: @fg; border-radius: 0;}
+#workspaces button.focused { background-color: #d79c40; font-weight: bold; color: @bg;}
+
+#clock { padding: 0 16px;  border-bottom: 2px solid #996600;}
+
+#pulseaudio { background-color: #d79c40 }
+#network    { background-color: #b88024; }
+#disk       { background-color: #996600; }
+#battery    { background-color: #663300; }
+
+
+
+
