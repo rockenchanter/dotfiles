@@ -1,12 +1,17 @@
 {
     "modules-left": [ "sway/workspaces" ],
     "modules-center": [ "clock" ],
-    "modules-right": [ "pulseaudio", "network", "disk", "battery" ],
+    "modules-right": [ "pulseaudio", "network", "disk", "battery", "sway/language" ],
     "output": ["eDP-1", "HDMI-A-1"],
     "spacing": 0,
     "margin": "10 10 0 10",
     "start_hidden": true,
     "ipc": true,
+
+    "sway/language": {
+        "format": "<span font='16' rise='-3000'>󰌌</span> {long}",
+        "on-click": "swaymsg input type:keyboard xkb_switch_layout next",
+    },
 
     "disk": {
         "interval": 1800,

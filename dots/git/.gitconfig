@@ -1,7 +1,7 @@
 [user]
 	name = Łukasz Flisak
 	email = lu.dev00@gmail.com
-    signingkey = EF831193EA780821
+    signingkey = A157C866FDABB3B7 
 [commit]
 	gpgsign = true
 [tag]

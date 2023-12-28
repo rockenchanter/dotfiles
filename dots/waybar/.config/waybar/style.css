@@ -19,7 +19,7 @@ window#waybar {
 .modules-left, .modules-center, .modules-right {
     background-color: @bg;
 }
-#battery, #pulseaudio, #network, #disk, #clock { padding: 0 8px; }
+#battery, #pulseaudio, #network, #disk, #clock, #language { padding: 0 8px; }
 
 #workspaces button { margin: 0; padding: 0 10px; color: @fg; border-radius: 0;}
 #workspaces button.focused { background-color: #d79c40; font-weight: bold; color: @bg;}
@@ -30,6 +30,7 @@ window#waybar {
 #network    { background-color: #b88024; }
 #disk       { background-color: #996600; }
 #battery    { background-color: #663300; }
+#language    { background-color: #452200; }
 
 
 
