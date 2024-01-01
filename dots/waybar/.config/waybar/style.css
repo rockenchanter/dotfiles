@@ -1,6 +1,6 @@
 @define-color bg #1d2021;
 @define-color fg #fbf1c7;
-@define-color red #cc241d;
+@define-color red #fb3934;
 @define-color green #98971a;
 @define-color yellow #d79921;
 @define-color blue #458588;
@@ -12,26 +12,22 @@
 window#waybar {
     font-family: 'CaskaydiaCove Nerd Font Mono';
     font-size: 12px;
-    background: transparent;
+    background: @bg;
     color: @fg;
 }
 
 .modules-left, .modules-center, .modules-right {
     background-color: @bg;
 }
-#battery, #pulseaudio, #network, #disk, #clock, #language { padding: 0 8px; }
+#battery, #pulseaudio, #network, #disk, #clock, #language,  #mpd { padding: 0 8px; }
 
 #workspaces button { margin: 0; padding: 0 10px; color: @fg; border-radius: 0;}
 #workspaces button.focused { background-color: #d79c40; font-weight: bold; color: @bg;}
-
-#clock { padding: 0 16px;  border-bottom: 2px solid #996600;}
 
 #pulseaudio { background-color: #d79c40 }
 #network    { background-color: #b88024; }
 #disk       { background-color: #996600; }
 #battery    { background-color: #663300; }
 #language    { background-color: #452200; }
-
-
-
-
+#mpd { color: @red; }
+#custom-screenshot { background-color: #e5a742; padding: 0 16px; }

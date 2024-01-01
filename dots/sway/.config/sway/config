@@ -1,5 +1,8 @@
 ### Autostart
 exec dbus-run-session pipewire
+exec mako
+exec mpd
+
 set $mod Mod4
 set $left h
 set $down j
@@ -7,7 +10,6 @@ set $up k
 set $right l
 
 set $term foot
-set $menu bemenu-run
 
 set $big_monitor HDMI-A-1
 set $laptop_monitor eDP-1
@@ -22,6 +24,9 @@ set $primary #996600
 set $active #d79c40
 set $background #1d2021
 set $foreground #ffffff
+
+set $menu bemenu-run -c -i -B 4 -W 0.6 --fn 'CaskaydiaCove Nerd Font Mono 13' --bdr '$primary' --nb '$background' --ab '$background' --hf '$active' -l 15 -s --fixed-height --tf "$primary" -p "Choose application: "
+
 client.focused $primary $background $foreground $active $primary
 
 #client.focused $color5 $background $foreground $color6 $color5

@@ -1,12 +1,19 @@
 {
-    "modules-left": [ "sway/workspaces" ],
-    "modules-center": [ "clock" ],
-    "modules-right": [ "pulseaudio", "network", "disk", "battery", "sway/language" ],
+    "modules-left": [ "sway/workspaces", "mpd" ],
+    "modules-center": [],
+    "modules-right": [ "custom/screenshot", "pulseaudio", "network", "disk", "battery", "sway/language", "clock" ],
     "output": ["eDP-1", "HDMI-A-1"],
     "spacing": 0,
-    "margin": "10 10 0 10",
+    "margin": "0",
     "start_hidden": true,
     "ipc": true,
+
+    "custom/screenshot": {
+        "on-click": "~/.scripts/screenshot-menu",
+        "interval": "once",
+        "format": "<span font='16' rise='-3000'>󰹑</span>",
+        "tooltip": false,
+    },
 
     "sway/language": {
         "format": "<span font='16' rise='-3000'>󰌌</span> {long}",
@@ -72,7 +79,8 @@
     },
 
     "clock": {
-        "format": "<span font='16' rise='-4000'></span> {:%A, %B %d, %Y %H:%M}",
+        "format": "<span font='16' rise='-4000'>󰥔</span> {:%H:%M}",
+        "format-alt": "<span font='16' rise='-4000'></span> {:%A, %B %d}",
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
         "calendar": {
             "mode"          : "year",

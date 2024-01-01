@@ -3,6 +3,10 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+alias rs='exec dbus-run-session sway'
+alias r4='exec startxfce4'
+
+
 alias sb="source ~/.bashrc"
 alias ls='ls --color=auto'
 alias lm='latexmk -pvc -pdf -jobname=./output/main main.tex'
@@ -45,6 +49,3 @@ function tl() {
 
 export EDITOR='nvim'
 export GPG_TTY=$(tty)
-if [ -z "${WAYLAND_DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
-  exec dbus-run-session sway
-fi
