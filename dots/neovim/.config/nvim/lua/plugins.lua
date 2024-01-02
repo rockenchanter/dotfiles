@@ -3,6 +3,7 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
     use 'ellisonleao/gruvbox.nvim'
     use "rebelot/kanagawa.nvim"
+    use 'norcalli/nvim-colorizer.lua'
 
     use "tpope/vim-commentary" -- easier commenting
     use "tpope/vim-obsession"  -- session support
