@@ -22,6 +22,8 @@ alias dcp='docker container prune'
 alias dip='docker image prune'
 alias dri='docker image rm'
 alias dls='docker image ls'
+alias dlc='docker container ls'
+alias dc='docker-compose'
 
 PS1='\[\e[0;1m\][\[\e[93m\]\u@\[\e[95m\]\H] \[\e[94m\]\w \[\e[91m\]$(git branch 2>/dev/null | grep '"'"'^*'"'"' | colrm 1 2)\n$ \[\e[0m\]'
 function fd() {
@@ -46,6 +48,10 @@ function tl() {
     echo 'Operation aborted'
   fi
 }
+
+if [ -z "${WAYLAND_DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
+  exec sway
+fi
 
 export EDITOR='nvim'
 export GPG_TTY=$(tty)

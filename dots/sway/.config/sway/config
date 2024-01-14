@@ -188,7 +188,7 @@ bindsym $mod+Shift+5 move container to workspace $ws5
 
 assign [app_id="Firefox"] workspace $ws1
 assign [app_id="org.qutebrowser.qutebrowser"] workspace $ws1
-assign [app_id="org.pwmt.zathura"] workspace $ws1
+#assign [app_id="org.pwmt.zathura"] workspace $ws1
 
 #
 # Layout stuff:
