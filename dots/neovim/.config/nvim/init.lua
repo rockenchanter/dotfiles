@@ -3,6 +3,8 @@ require 'configs.treesitter'
 require 'configs.lsp'
 require 'configs.colorscheme'
 require 'configs.nvimtree'
+require 'configs.telescope'
+require 'configs.lualine'
 
 local opt = vim.o
 local map = vim.api.nvim_set_keymap
@@ -54,5 +56,4 @@ map("n", "<leader>tt", ":TroubleToggle<cr>", opts)
 
 vim.opt.termguicolors = true
 require("bufferline").setup{}
-require('lualine').setup()
 require('colorizer').setup()
