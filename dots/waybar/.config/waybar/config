@@ -9,7 +9,7 @@
     "ipc": true,
 
     "custom/screenshot": {
-        "on-click": "~/.scripts/screenshot-menu",
+        "on-click": "grimshot --notify save area",
         "interval": "once",
         "format": "<span font='16' rise='-3000'>󰹑</span>",
         "tooltip": false,

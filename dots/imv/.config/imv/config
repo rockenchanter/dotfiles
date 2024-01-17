@@ -1,0 +1,10 @@
+[options]
+fullscreen = true
+scaling_mode = none
+overlay = true
+overlay_font = CaskaydiaCove Nerd Font Mono:13
+overlay_position_bottom = true
+
+[binds]
+p = prev
+n = next
