@@ -15,15 +15,15 @@ set $big_monitor HDMI-A-1
 set $laptop_monitor eDP-1
 
 
-default_border pixel 4
+default_border pixel 3
 gaps inner 10
 smart_borders off
 smart_gaps off
 
-set $primary #996600
-set $active #d79c40
+set $active #d3869b
+set $primary #458588
 set $background #1d2021
-set $foreground #ffffff
+set $foreground #fbf1c7
 
 set $menu bemenu-run -c -i -B 4 -W 0.6 --fn 'CaskaydiaCove Nerd Font Mono 13' --bdr '$primary' --nb '$background' --ab '$background' --hf '$active' -l 15 -s --fixed-height --tf "$primary" -p "Choose application: "
 
@@ -113,9 +113,9 @@ bindsym XF86MonBrightnessUp exec brightnessctl set +10%
 #
 # screenshots
 #
-bindsym Print exec grimshot --notify save output
-bindsym Shift+Print exec grimshot --notify save window
-bindsym $mod+Print exec grimshot --notify save area
+# bindsym Print exec grimshot --notify save output
+# bindsym Shift+Print exec grimshot --notify save window
+# bindsym $mod+Print exec grimshot --notify save area
 
 #
 # moving around:
