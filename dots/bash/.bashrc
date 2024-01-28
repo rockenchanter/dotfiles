@@ -17,6 +17,10 @@ alias poweroff='loginctl poweroff'
 alias reboot='loginctl reboot'
 alias unblock='sudo rfkill unblock all'
 
+alias smd="sv down ~/.services/*"
+alias smu="sv up ~/.services/*"
+alias sms="sv status ~/.services/*"
+
 # docker aliases
 alias dcp='docker container prune'
 alias dip='docker image prune'
@@ -49,9 +53,9 @@ function tl() {
   fi
 }
 
-if [ -z "${WAYLAND_DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
-  exec sway
-fi
+# if [ -z "${WAYLAND_DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
+#   exec sway
+# fi
 
 export EDITOR='nvim'
 export GPG_TTY=$(tty)
