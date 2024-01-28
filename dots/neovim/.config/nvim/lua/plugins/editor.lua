@@ -1,11 +1,20 @@
 return {
     {
+        "lukas-reineke/indent-blankline.nvim",
+        main = "ibl",
+        opts = {},
+        config = function ()
+            require("ibl").setup()
+        end
+    },
+
+    {
         'nvim-telescope/telescope.nvim',
-        dependencies = { 
+        dependencies = {
             'nvim-lua/plenary.nvim',
             'nvim-tree/nvim-web-devicons'
         },
-        config = function() 
+        config = function()
             require('telescope').setup({
                 defaults = {
                     layout_config = {
@@ -23,14 +32,12 @@ return {
             vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
         end
     },
-
     {
         'akinsho/bufferline.nvim',
         config = function()
             require("bufferline").setup{}
         end
     },
-
     {
         'lewis6991/gitsigns.nvim',
         config = function()
