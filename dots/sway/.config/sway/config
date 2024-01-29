@@ -22,10 +22,11 @@ smart_gaps off
 
 set $active #d3869b
 set $primary #458588
-set $background #1d2021
-set $foreground #fbf1c7
+set $background #f9f9f9
+set $foreground #282828
 
-set $menu bemenu-run -c -i -B 4 -W 0.6 --fn 'CaskaydiaCove Nerd Font Mono 13' --bdr '$primary' --nb '$background' --ab '$background' --hf '$active' -l 15 -s --fixed-height --tf "$primary" -p "Choose application: "
+set $menu bemenu-run -c -i -B 4 -W 0.6 --fn 'CaskaydiaCove Nerd Font Mono 13' --bdr '$primary' --nb '$background' --ab '$background' --hf '$active' -l 15 -s --fixed-height --tf "$primary" -p "Choose application: " --tb "$background" --tf "$primary" --fb "$background" --ff "$foreground" --hf "$active" --hb "$background"
+
 
 client.focused $primary $background $foreground $active $primary
 
@@ -34,7 +35,7 @@ client.focused $primary $background $foreground $active $primary
 #client.unfocused $background $background $foreground $background $background
 
 ### Output configuration
-output "*" bg ~/.wallpaper.png fill
+output "*" bg ~/.wallpaper_light.png fill
 output $laptop_monitor resolution 1366x768 position 0,0
 output $big_monitor resolution 1440x900 position 1440,0
 

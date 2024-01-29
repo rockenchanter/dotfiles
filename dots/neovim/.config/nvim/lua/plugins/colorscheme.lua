@@ -28,6 +28,7 @@ return {
                 dim_inactive = false,
                 transparent_mode = false,
             })
+            vim.opt.background = 'light'
             vim.cmd("colorscheme gruvbox")
         end
     }

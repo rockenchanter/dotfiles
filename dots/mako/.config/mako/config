@@ -1,12 +1,12 @@
 font=CaskaydiaCove Nerd Font Mono 10
 
-text-color=#fbf1c7
-background-color=#1d2021
-border-color=#996600
+text-color=#282828
+background-color=#f9f9f9
+border-color=#b57614
 border-size=3
 padding=10,20
 
-format=<span size="15pt" foreground="#d79c40"><b>%s</b></span>\n\n%b
+format=<span size="15pt" foreground="#076678"><b>%s</b></span>\n\n%b
 max-visible=3
 default-timeout=10000
 height=200

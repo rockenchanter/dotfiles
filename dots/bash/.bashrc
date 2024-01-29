@@ -5,6 +5,7 @@
 
 alias rs='exec dbus-run-session sway'
 alias r4='exec startxfce4'
+alias yt='yt-dlp -x --audio-quality 0'
 
 
 alias sb="source ~/.bashrc"
