@@ -18,9 +18,17 @@ alias poweroff='loginctl poweroff'
 alias reboot='loginctl reboot'
 alias unblock='sudo rfkill unblock all'
 
+# runit aliases for user-services
 alias smd="sv down ~/.services/*"
 alias smu="sv up ~/.services/*"
 alias sms="sv status ~/.services/*"
+
+# git aliases
+alias glt='git log --graph --pretty=oneline --abbrev-commit'
+alias gs='git status'
+alias gl='git log'
+alias gr='git remote --verbose'
+alias gb='git branch --verbose'
 
 # docker aliases
 alias dcp='docker container prune'
