@@ -38,6 +38,11 @@ awk '/(directory)/ { print $2 }' ~/.config/mpd/mpd.conf | xargs -I % bash -c "mk
 awk '/(_file)/ { print $2 }' ~/.config/mpd/mpd.conf | xargs -I % bash -c "touch %"
 awk -F '=' '/(_directory)/ { print $2 }' ~/.config/ncmpcpp/config | xargs -I % bash -c "mkdir -p %"
 
+# download nerd font
+mkdir ~/.local/share/fonts -p
+cd ~/.local/share/fonts
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/CascadiaCode.zip
+unzip CascadiaCove.zip && rm CaskadiaCove.zip
 
 # install node version manager
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
