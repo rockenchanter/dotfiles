@@ -40,9 +40,10 @@
         "all-outputs": true,
         "format": "{icon}",
         "format-icons": {
-            "default": "<span font='15'></span>",
             "focused": "<span font='15'></span>",
             "urgent": "<span font='15'></span>",
+            "persistent": "<span font='15'></span>",
+            "default": "<span font='15'></span>",
         },
         "persistent_workspaces": {
             "1": [],

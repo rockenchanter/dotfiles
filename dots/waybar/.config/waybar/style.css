@@ -8,6 +8,9 @@
 @define-color light_blue #076678;
 @define-color purple #8f3f71;
 
+@define-color active_btn #f77f00;
+@define-color btn #3590f3;
+
 
 window#waybar {
     font-family: 'CaskaydiaCove Nerd Font Mono';
@@ -24,8 +27,10 @@ window#waybar {
     border-radius: 10px;
 }
 
-#workspaces button { margin: 0; padding: 0 10px; color: @fg; border-radius: 0;}
-#workspaces button.focused { color: @light_blue; font-weight: bold}
+#workspaces button { margin: 0; padding: 0 10px; color: @btn; border-radius: 0}
+
+#workspaces button.persistent { color: @fg;}
+#workspaces button.focused { color: @active_btn;}
 
 #custom-screenshot { color: @red; }
 #pulseaudio        { color: @light_blue; }
