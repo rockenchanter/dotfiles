@@ -72,6 +72,7 @@ return {
         {
             'nvim-treesitter/nvim-treesitter',
             dependencies = { 'nvim-treesitter/nvim-treesitter-context' },
+            build = ":TSUpdate",
             config = function()
                 require'nvim-treesitter.configs'.setup {
                     ensure_installed = {
@@ -85,9 +86,7 @@ return {
                         enable = true,
                         additional_vim_regex_highlighting = false,
                     },
-                    indent = {
-                        enable = true,
-                    }
+                    indent = { enable = true, }
                 }
                 require'treesitter-context'.setup{
                     enable = true, -- Enable this plugin (Can be enabled/disabled later via commands)

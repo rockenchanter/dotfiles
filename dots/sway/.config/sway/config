@@ -50,7 +50,7 @@ input "*" {
 
 # Switch keyboard layout
 bindsym $mod+period input type:keyboard xkb_switch_layout next
-bindsym $mod+t layout stacking
+bindsym $mod+t layout tabbed
 bindsym $mod+Shift+t layout toggle
 
 ### Key bindings
@@ -187,8 +187,8 @@ bindsym $mod+Shift+5 move container to workspace $ws5
 # bindsym $mod+Shift+9 move container to workspace $ws9
 # bindsym $mod+Shift+0 move container to workspace $ws10
 
-assign [app_id="Firefox"] workspace $ws1
-assign [app_id="org.qutebrowser.qutebrowser"] workspace $ws1
+#assign [app_id="Firefox"] workspace $ws1
+#assign [app_id="org.qutebrowser.qutebrowser"] workspace $ws1
 #assign [app_id="org.pwmt.zathura"] workspace $ws1
 
 #

@@ -18,6 +18,8 @@ alias poweroff='loginctl poweroff'
 alias reboot='loginctl reboot'
 alias unblock='sudo rfkill unblock all'
 
+alias ac='source .venv/bin/activate'
+
 # runit aliases for user-services
 alias smd="sv down ~/.services/*"
 alias smu="sv up ~/.services/*"
@@ -28,7 +30,7 @@ alias glt='git log --graph --pretty=oneline --abbrev-commit'
 alias gs='git status'
 alias gl='git log'
 alias gr='git remote --verbose'
-alias gb='git branch --verbose'
+alias gb='git branch --verbose --all'
 
 # docker aliases
 alias dcp='docker container prune'
@@ -62,9 +64,9 @@ function tl() {
   fi
 }
 
-# if [ -z "${WAYLAND_DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
-#   exec sway
-# fi
+if [ -z "${WAYLAND_DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
+  exec sway
+fi
 
 export EDITOR='nvim'
 export GPG_TTY=$(tty)

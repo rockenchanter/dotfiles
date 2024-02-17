@@ -23,6 +23,7 @@ opt.relativenumber = true
 opt.splitbelow = true
 opt.splitright = true
 opt.cursorline = true
+opt.colorcolumn = '81,82'
 opt.clipboard = "unnamedplus"
 opt.scrolloff = 5
 opt.tabstop = 4
