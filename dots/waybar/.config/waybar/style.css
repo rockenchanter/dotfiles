@@ -1,5 +1,5 @@
-@define-color fg #282828;
-@define-color bg #ffffff;
+@define-color fg #ffffff;
+@define-color bg #1d2021;
 
 @define-color red #9d0006;
 @define-color orange #af3a03;
@@ -8,20 +8,17 @@
 @define-color light_blue #076678;
 @define-color purple #8f3f71;
 
-@define-color active_btn #f77f00;
+@define-color active_btn #d3869b;
 @define-color btn #3590f3;
 
 
 window#waybar {
     font-family: 'CaskaydiaCove Nerd Font Mono';
     font-size: 12px;
-    background: @bg;
+    background-color: rgba(0,0,0, .6);
     color: @fg;
 }
 
-.modules-left, .modules-center, .modules-right {
-    background-color: @bg;
-}
 #battery, #pulseaudio, #network, #disk, #clock, #language, #custom-screenshot, #mpd { 
     padding: 0 8px; 
     border-radius: 10px;
@@ -32,10 +29,10 @@ window#waybar {
 #workspaces button.persistent { color: @fg;}
 #workspaces button.focused { color: @active_btn;}
 
-#custom-screenshot { color: @red; }
-#pulseaudio        { color: @light_blue; }
-#network           { color: @green; }
-#disk              { color: @yellow; }
-#battery           { color: @orange; }
-#language          { color: @red; }
-#mpd               { color: @purple; }
+#custom-screenshot { color: @fg; }
+#pulseaudio        { color: @fg; }
+#network           { color: @fg; }
+#disk              { color: @fg; }
+#battery           { color: @fg; }
+#language          { color: @fg; }
+#mpd               { color: @fg; }

@@ -1,7 +1,6 @@
 ### Autostart
 exec dbus-run-session pipewire
 exec mako
-exec mpd
 
 set $mod Mod4
 set $left h
@@ -22,20 +21,16 @@ smart_gaps off
 
 set $active #d3869b
 set $primary #458588
-set $background #f9f9f9
-set $foreground #282828
+set $background #1d2021
+set $foreground #fefefe
 
 set $menu bemenu-run -c -i -B 4 -W 0.6 --fn 'CaskaydiaCove Nerd Font Mono 13' --bdr '$primary' --nb '$background' --ab '$background' --hf '$active' -l 15 -s --fixed-height --tf "$primary" -p "Choose application: " --tb "$background" --tf "$primary" --fb "$background" --ff "$foreground" --hf "$active" --hb "$background"
 
 
 client.focused $primary $background $foreground $active $primary
 
-#client.focused $color5 $background $foreground $color6 $color5
-#client.focused_inactive $background $background $foreground $background $background
-#client.unfocused $background $background $foreground $background $background
-
 ### Output configuration
-output "*" bg ~/.wallpaper_light.png fill
+output "*" bg ~/.wallpaper.png fill
 output $laptop_monitor resolution 1366x768 position 0,0
 output $big_monitor resolution 1440x900 position 1440,0
 
@@ -54,7 +49,6 @@ bindsym $mod+t layout tabbed
 bindsym $mod+Shift+t layout toggle
 
 ### Key bindings
-# Screenshots
 # Start a terminal
 bindsym $mod+Return exec $term
 
@@ -112,13 +106,6 @@ bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
 bindsym XF86MonBrightnessUp exec brightnessctl set +10%
 
 #
-# screenshots
-#
-# bindsym Print exec grimshot --notify save output
-# bindsym Shift+Print exec grimshot --notify save window
-# bindsym $mod+Print exec grimshot --notify save area
-
-#
 # moving around:
 #
 
@@ -144,11 +131,11 @@ set $ws2 2
 set $ws3 3
 set $ws4 4
 set $ws5 5
-# set $ws6 6
-# set $ws7 7
-# set $ws8 8
-# set $ws9 9
-# set $ws10 10
+set $ws6 6
+set $ws7 7
+set $ws8 8
+set $ws9 9
+set $ws10 10
 
 
 # Assigning workspaces to outputs
@@ -157,11 +144,11 @@ workspace $ws2 output $big_monitor
 workspace $ws3 output $big_monitor
 workspace $ws4 output $big_monitor
 workspace $ws5 output $big_monitor
-# workspace $ws6 output $laptop_monitor
-# workspace $ws7 output $laptop_monitor
-# workspace $ws8 output $laptop_monitor
-# workspace $ws9 output $laptop_monitor
-# workspace $ws10 output $laptop_monitor
+workspace $ws6 output $laptop_monitor
+workspace $ws7 output $laptop_monitor
+workspace $ws8 output $laptop_monitor
+workspace $ws9 output $laptop_monitor
+workspace $ws10 output $laptop_monitor
 
 # Switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -169,11 +156,11 @@ bindsym $mod+2 workspace $ws2
 bindsym $mod+3 workspace $ws3
 bindsym $mod+4 workspace $ws4
 bindsym $mod+5 workspace $ws5
-# bindsym $mod+6 workspace $ws6
-# bindsym $mod+7 workspace $ws7
-# bindsym $mod+8 workspace $ws8
-# bindsym $mod+9 workspace $ws9
-# bindsym $mod+0 workspace $ws10
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
 
 # Move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
@@ -181,11 +168,11 @@ bindsym $mod+Shift+2 move container to workspace $ws2
 bindsym $mod+Shift+3 move container to workspace $ws3
 bindsym $mod+Shift+4 move container to workspace $ws4
 bindsym $mod+Shift+5 move container to workspace $ws5
-# bindsym $mod+Shift+6 move container to workspace $ws6
-# bindsym $mod+Shift+7 move container to workspace $ws7
-# bindsym $mod+Shift+8 move container to workspace $ws8
-# bindsym $mod+Shift+9 move container to workspace $ws9
-# bindsym $mod+Shift+0 move container to workspace $ws10
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10
 
 #assign [app_id="Firefox"] workspace $ws1
 #assign [app_id="org.qutebrowser.qutebrowser"] workspace $ws1
