@@ -6,7 +6,7 @@ indicator-caps-lock
 scaling=fill
 font=CaskaydiaCove Nerd Font Mono
 font-size=13
-image=~/.wallpapers/lockscreen.png
+image=~/.wallpaper.png
 indicator-idle-visible
 indicator-radius=60
 indicator-thickness=20

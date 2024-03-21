@@ -73,6 +73,5 @@ if [ -z "${WAYLAND_DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
   exec sway
 fi
 
-export PATH="${PATH}:${HOME}/scilab/bin:${HOME}/.scripts/:/usr/local/texlive/2023/bin/x86_64-linux/"
 export EDITOR='nvim'
 export GPG_TTY=$(tty)
