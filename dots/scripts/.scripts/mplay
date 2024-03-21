@@ -1,0 +1,16 @@
+#!/bin/sh
+
+
+VIDEOS_DIR="${HOME}/media/videos/"
+PLAYLIST_FILE='playlist.txt'
+
+
+cd $VIDEOS_DIR
+choice=$(find . -name playlist.txt | fzf)
+
+if [ -n "${choice}" ]; then
+    cd ${choice%%$PLAYLIST_FILE}
+    mpv --save-position-on-quit --playlist=${PLAYLIST_FILE}
+else
+    echo "No playlist file"
+fi

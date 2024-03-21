@@ -8,17 +8,25 @@ alias r4='exec startxfce4'
 alias yt='yt-dlp -x --audio-quality 0'
 
 
+alias nc='ncmpcpp'
 alias sb="source ~/.bashrc"
 alias ls='ls --color=auto'
 alias lm='latexmk -pvc -pdf -jobname=./output/main main.tex'
+# tmux
 alias ta='tmux attach || tmux'
 alias tks='tmux kill-server'
-alias mmo="sudo chown $USER:$USER -R ."
+
+# make mine
+alias mm="sudo chown $USER:$USER -R ."
+
+# elogind
 alias poweroff='loginctl poweroff'
 alias reboot='loginctl reboot'
 alias unblock='sudo rfkill unblock all'
 
+# python virtual environments
 alias ac='source .venv/bin/activate'
+alias mkenv='python -m venv .venv'
 
 # runit aliases for user-services
 alias smd="sv down ~/.services/*"
@@ -40,18 +48,15 @@ alias dls='docker image ls'
 alias dlc='docker container ls'
 alias dc='docker-compose'
 
+# load pywal colorscheme
+(cat ~/.cache/wal/sequences &)
 PS1='\[\e[0;1m\][\[\e[93m\]\u@\[\e[95m\]\H] \[\e[94m\]\w \[\e[91m\]$(git branch 2>/dev/null | grep '"'"'^*'"'"' | colrm 1 2)\n$ \[\e[0m\]'
+
 function fd() {
   local dir
   dir=$(find ${1:-.} -path '*/\.*' -prune \
                   -o -type d -print 2> /dev/null | fzf +m) &&
   cd "$dir"
-}
-
-function mpvp() {
-    cd ~/media/videos/
-    fd
-    [ -e "playlist.txt" ] && mpv --save-position-on-quit --playlist=playlist.txt || echo "No playlist file"
 }
 
 function tl() {
@@ -68,5 +73,6 @@ if [ -z "${WAYLAND_DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
   exec sway
 fi
 
+export PATH="${PATH}:${HOME}/scilab/bin:${HOME}/.scripts/:/usr/local/texlive/2023/bin/x86_64-linux/"
 export EDITOR='nvim'
 export GPG_TTY=$(tty)

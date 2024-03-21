@@ -1,0 +1,27 @@
+ignore-empty-password
+show-failed-attempts
+daemonize
+show-keyboard-layout
+indicator-caps-lock
+scaling=fill
+font=CaskaydiaCove Nerd Font Mono
+font-size=13
+image=~/.wallpapers/lockscreen.png
+indicator-idle-visible
+indicator-radius=60
+indicator-thickness=20
+indicator-x-position=150
+indicator-y-position=600
+inside-color=00000000
+inside-wrong-color=ec5139
+line-wrong-color=ec5139
+ring-wrong-color=ec5139
+layout-bg-color=00000000
+line-color=00000000
+line-clear-color=00000000
+inside-ver-color=333399
+line-ver-color=333399
+ring-ver-color=333399
+separator-color=00000000
+ring-color=fcd562
+key-hl-color=ffcc33

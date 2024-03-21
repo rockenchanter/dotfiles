@@ -1,22 +1,11 @@
-@define-color fg #ffffff;
-@define-color bg #1d2021;
-
-@define-color red #9d0006;
-@define-color orange #af3a03;
-@define-color yellow #b57614;
-@define-color green #79740e;
-@define-color light_blue #076678;
-@define-color purple #8f3f71;
-
-@define-color active_btn #d3869b;
-@define-color btn #3590f3;
+@import '/home/rockenchanter/.cache/wal/colors-waybar.css';
 
 
 window#waybar {
     font-family: 'CaskaydiaCove Nerd Font Mono';
     font-size: 12px;
-    background-color: rgba(0,0,0, .6);
-    color: @fg;
+    background-color: @background;
+    color: @foreground;
 }
 
 #battery, #pulseaudio, #network, #disk, #clock, #language, #custom-screenshot, #mpd { 
@@ -24,15 +13,15 @@ window#waybar {
     border-radius: 10px;
 }
 
-#workspaces button { margin: 0; padding: 0 10px; color: @btn; border-radius: 0}
+#workspaces button { margin: 0; padding: 0 10px; color: @foreground; border-radius: 0}
+#workspaces button.focused { color: @color5;}
 
-#workspaces button.persistent { color: @fg;}
-#workspaces button.focused { color: @active_btn;}
+#custom-screenshot { color: @color2; }
+#network           { color: @color2; }
+#battery           { color: @color2; }
+#mpd               { color: @color2; }
+#clock          { color: @color2; }
 
-#custom-screenshot { color: @fg; }
-#pulseaudio        { color: @fg; }
-#network           { color: @fg; }
-#disk              { color: @fg; }
-#battery           { color: @fg; }
-#language          { color: @fg; }
-#mpd               { color: @fg; }
+#pulseaudio        { color: @color5; }
+#disk              { color: @color5; }
+#language          { color: @color5; }

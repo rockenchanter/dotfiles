@@ -1,7 +1,7 @@
 {
-    "modules-left": [ "sway/workspaces", ],
+    "modules-left": [ "sway/workspaces", "mpd"],
     "modules-center": [],
-    "modules-right": [ "custom/screenshot", "pulseaudio", "network", "disk", "battery", "sway/language", "clock" ],
+    "modules-right": [ "pulseaudio", "network", "disk", "battery", "sway/language", "clock" ],
     "output": ["eDP-1", "HDMI-A-1"],
     "spacing": 0,
     "margin": "0",
@@ -38,25 +38,13 @@
 
     "sway/workspaces": {
         "all-outputs": true,
-        "format": "{icon}",
+        "format": "{index}",
         "format-icons": {
             "focused": "<span font='15'></span>",
             "urgent": "<span font='15'></span>",
             "persistent": "<span font='15'></span>",
             "default": "<span font='15'></span>",
         },
-        "persistent_workspaces": {
-            "1": [],
-            "2": [],
-            "3": [],
-            "4": [],
-            "5": [],
-            "6": [],
-            "7": [],
-            "8": [],
-            "9": [],
-            "10": [],
-        }
     },
 
     "battery": {

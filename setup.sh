@@ -6,12 +6,11 @@
 window_manager=" sway swaybg swaylock swayidle foot bemenu Waybar polkit xorg xorg-server-xwayland elogind brightnessctl"
 drivers="vulkan-loader mesa-vulkan-radeon mesa-vaapi mesa-vdpau mesa-vulkan-intel intel-video-accel"
 web_browsers="firefox qutebrowser"
-media="mpv mpc mpd ncmpcpp zathura zathura-pdf-mupdf"
+media="mpv mpc mpd ncmpcpp zathura zathura-pdf-mupdf imv"
 tools="neovim fzf ripgrep ranger htop git stow base-devel zip unzip tmux python3-tmuxp xdg-user-dirs xdg-desktop-portal xdg-desktop-portal-wlr gnupg grimshot cronie curl wget mako libnotify qt5-wayland qt6-wayland python3-adblock"
 network="NetworkManager network-manager-applet"
 audio="pipewire wireplumber pavucontrol pamixer libjack-pipewire"
 programming="docker docker-compose openssl openssl-devel libyaml-devel"
-databases="postgresql postgresql-client postgresql-contrib dbeaver"
 
 sudo xbps-install -Su
 sudo xbps-install ${window_manager} ${drivers} ${web_browsers} ${media} ${tools} ${network} ${audio} ${programming} ${databases}

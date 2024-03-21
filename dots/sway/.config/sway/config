@@ -1,6 +1,9 @@
+include ~/.cache/wal/colors-sway
 ### Autostart
 exec dbus-run-session pipewire
 exec mako
+exec mpd
+exec swayidle
 
 set $mod Mod4
 set $left h
@@ -16,21 +19,21 @@ set $laptop_monitor eDP-1
 
 default_border pixel 3
 gaps inner 10
-smart_borders off
-smart_gaps off
+smart_borders on
+smart_gaps on
 
-set $active #d3869b
-set $primary #458588
-set $background #1d2021
-set $foreground #fefefe
+set $active $color5
+set $primary $color2
+set $background $color0
+set $foreground $color7
 
-set $menu bemenu-run -c -i -B 4 -W 0.6 --fn 'CaskaydiaCove Nerd Font Mono 13' --bdr '$primary' --nb '$background' --ab '$background' --hf '$active' -l 15 -s --fixed-height --tf "$primary" -p "Choose application: " --tb "$background" --tf "$primary" --fb "$background" --ff "$foreground" --hf "$active" --hb "$background"
-
+set $opts -c -i -B 4 -W 0.6 --fn 'CaskaydiaCove Nerd Font Mono 13' --bdr '$primary' --nb '$background' --ab '$background' --hf '$active' -l 15 -s --fixed-height --tf "$primary" --tb "$background" --tf "$primary" --fb "$background" --ff "$foreground" --hf "$active" --hb "$background"
+set $menu bemenu-run  -p "Choose application: "
 
 client.focused $primary $background $foreground $active $primary
 
 ### Output configuration
-output "*" bg ~/.wallpaper.png fill
+output "*" bg $wallpaper fill
 output $laptop_monitor resolution 1366x768 position 0,0
 output $big_monitor resolution 1440x900 position 1440,0
 
@@ -43,12 +46,16 @@ input "*" {
         xkb_options caps:escape
 }
 
+bindsym Print exec ~/.scripts/screenshot.sh
+
 # Switch keyboard layout
 bindsym $mod+period input type:keyboard xkb_switch_layout next
 bindsym $mod+t layout tabbed
 bindsym $mod+Shift+t layout toggle
 
 ### Key bindings
+# Change wallpaper
+bindsym $mod+w exec wal --iterative -qsi ~/.wallpapers/
 # Start a terminal
 bindsym $mod+Return exec $term
 
@@ -144,11 +151,11 @@ workspace $ws2 output $big_monitor
 workspace $ws3 output $big_monitor
 workspace $ws4 output $big_monitor
 workspace $ws5 output $big_monitor
-workspace $ws6 output $laptop_monitor
-workspace $ws7 output $laptop_monitor
-workspace $ws8 output $laptop_monitor
-workspace $ws9 output $laptop_monitor
-workspace $ws10 output $laptop_monitor
+workspace $ws6 output $big_monitor
+workspace $ws7 output $big_monitor
+workspace $ws8 output $big_monitor
+workspace $ws9 output $big_monitor
+workspace $ws10 output $big_monitor
 
 # Switch to workspace
 bindsym $mod+1 workspace $ws1

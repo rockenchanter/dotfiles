@@ -73,13 +73,20 @@ return {
             })
 
             vim.diagnostic.config({
-                virtual_text = true,
+                virtual_text = false,
                 signs = true,
                 update_in_insert = false,
                 underline = true,
                 severity_sort = false,
                 float = true,
             })
+        end
+    },
+    {
+        "folke/trouble.nvim",
+        dependencies = { "nvim-tree/nvim-web-devicons" },
+        config = function ()
+            vim.keymap.set("n", "<leader>tt", function() require("trouble").toggle() end)
         end
     }
 }

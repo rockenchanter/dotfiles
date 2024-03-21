@@ -14,6 +14,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local lazy_opts = {}
+vim.o.termguicolors = true
 require("lazy").setup("plugins", lazy_opts)
 
 local opt = vim.o
@@ -22,8 +23,7 @@ opt.lazyredraw = true
 opt.relativenumber = true
 opt.splitbelow = true
 opt.splitright = true
-opt.cursorline = true
-opt.colorcolumn = '81,82'
+opt.cursorline = false
 opt.clipboard = "unnamedplus"
 opt.scrolloff = 5
 opt.tabstop = 4
@@ -32,6 +32,7 @@ opt.wrap = false
 opt.expandtab = true
 opt.equalalways = false
 opt.completeopt="menu,menuone,noselect"
+opt.laststatus = 0
 
 local opts = { noremap = true }
 local map = vim.api.nvim_set_keymap
