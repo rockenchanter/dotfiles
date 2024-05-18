@@ -1,22 +1,22 @@
- return {
-     -- telescope
-     {
-         'nvim-telescope/telescope.nvim',
-         dependencies = { 
-             'nvim-lua/plenary.nvim',
-             'sharkdp/fd',
-             'nvim-tree/nvim-web-devicons',
-         },
-         config = function ()
-             local builtin = require('telescope.builtin')
-             vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
-             vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
-             vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
-             vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
-         end
-     },
+return {
+    -- telescope
+    {
+        'nvim-telescope/telescope.nvim',
+        dependencies = { 
+            'nvim-lua/plenary.nvim',
+            'sharkdp/fd',
+            'nvim-tree/nvim-web-devicons',
+        },
+        config = function ()
+            local builtin = require('telescope.builtin')
+            vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+            vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+            vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+            vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+        end
+    },
 
-     -- colorscheme
+    -- colorscheme
     { 
         "ellisonleao/gruvbox.nvim",
         priority = 1000 ,
@@ -57,11 +57,28 @@
             local configs = require("nvim-treesitter.configs")
 
             configs.setup({
-                ensure_installed = { "lua", "vim", "html", "javascript", "css", "python", "markdown", "latex"  },
+                ensure_installed = { "lua", "vim", "html", "javascript", "css", "python", "markdown" },
                 sync_install = false,
                 highlight = { enable = true },
                 indent = { enable = true },  
             })
+        end
+    },
+
+    -- bufferline & statuline
+    { 
+        'akinsho/bufferline.nvim',
+        version = "*",
+        dependencies = 'nvim-tree/nvim-web-devicons',
+        config = function()
+            require("bufferline").setup{}
+        end
+    },
+    { 
+        'nvim-lualine/lualine.nvim',
+        dependencies = { 'nvim-tree/nvim-web-devicons' },
+        config = function ()
+            require('lualine').setup()
         end
     }
 }
