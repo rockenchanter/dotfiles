@@ -23,7 +23,6 @@ require("lazy").setup("plugins")
 -- OPTIONS
 local o = vim.o
 
-
 o.scrolloff = 5
 o.wrap = false
 o.lazyredraw = true
@@ -41,3 +40,8 @@ o.tabstop = 4
 o.shiftwidth = 4
 o.expandtab = true
 o.smartindent = true
+
+-- KEYBINDS
+vim.keymap.set('n', '<Tab>', ':bn<cr>', {})
+vim.keymap.set('n', '<S-Tab>', ':bp<cr>', {})
+vim.keymap.set('n', '<leader>d', ':bd<cr>', {})

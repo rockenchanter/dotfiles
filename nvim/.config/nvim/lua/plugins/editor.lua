@@ -80,5 +80,20 @@ return {
         config = function ()
             require('lualine').setup()
         end
-    }
+    },
+
+    -- git signs
+    {
+        'lewis6991/gitsigns.nvim',
+        config = function()
+            require('gitsigns').setup()
+        end
+    },
+
+    {
+        'norcalli/nvim-colorizer.lua',
+        config = function() 
+            require 'colorizer'.setup()
+        end
+    },
 }
