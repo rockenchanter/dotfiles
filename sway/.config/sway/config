@@ -1,8 +1,6 @@
 include ~/.cache/wal/colors-sway
 
 ### Autostart
-exec mako
-exec mpd
 exec swayidle
 
 set $mod Mod4
@@ -27,7 +25,7 @@ floating_modifier $mod normal
 set $active $color1
 set $primary $color4
 
-set $opts -c -i -B 4 -W 0.6 --fn 'CaskaydiaCove Nerd Font Mono 13' --bdr '$primary' --nb '$background' --ab '$background' --hf '$active' -l 15 -s --fixed-height --tf "$primary" --tb "$background" --tf "$primary" --fb "$background" --ff "$foreground" --hf "$active" --hb "$background"
+set $opts -c -i -B 4 -W 0.6 --fn 'JetBrainsMono Nerd Font 13' --bdr '$primary' --nb '$background' --ab '$background' --hf '$active' -l 15 -s --fixed-height --tf "$primary" --tb "$background" --tf "$primary" --fb "$background" --ff "$foreground" --hf "$active" --hb "$background"
 set $menu bemenu-run $opts -p "Choose application: "
 
 client.focused $primary $background $foreground $active $primary
