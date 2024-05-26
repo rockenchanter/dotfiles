@@ -8,12 +8,15 @@
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias sb="source ~/.bashrc"
+alias yta='yt-dlp -x --audio-quality 0 --audio-format opus'
 
 # git
 alias gs='git status'
 alias gd='git diff'
 alias gc='git commit'
 alias gr='git remote --verbose'
+alias nc='ncmpcpp'
+alias rr='ranger'
 
 # python's virtual environments
 alias activate='source .venv/bin/activate'
