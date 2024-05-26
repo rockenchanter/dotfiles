@@ -1,5 +1,5 @@
 {
-"modules-left": ["sway/workspaces"],
+"modules-left": ["sway/workspaces", "mpd"],
 "modules-center": ["clock"],
 "modules-right": ["pulseaudio", "network", "disk", "battery"],
 
@@ -24,11 +24,21 @@
     }
 },
 
+"mpd": {
+    "format": "{stateIcon} {artist} - {title}",
+    "unknown-tag": "",
+    "state-icons": {
+        "paused": "",
+        "playing": ""
+    }
+},
+
 "clock": {
     "format": "{:%A, %d %B %H:%M}",
 },
 
 "pulseaudio": {
+    "max-volume": 150,
     "format": "{icon} {volume}%",
     "format-muted": " ",
     "format-icons": [
