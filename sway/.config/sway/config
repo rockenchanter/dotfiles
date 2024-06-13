@@ -2,6 +2,7 @@ include ~/.cache/wal/colors-sway
 
 ### Autostart
 exec swayidle
+exec mako
 
 set $mod Mod4
 set $left h
@@ -47,6 +48,10 @@ input "*" {
 }
 
 ### Key bindings
+
+# Take screenshot
+bindsym Print exec ~/.scripts/grimshot --notify save area
+bindsym Shift+Print exec ~/.scripts/grimshot --notify save output
 
 # Switch keyboard layout
 bindsym $mod+period input type:keyboard xkb_switch_layout next

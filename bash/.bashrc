@@ -10,6 +10,9 @@ alias grep='grep --color=auto'
 alias sb="source ~/.bashrc"
 alias yta='yt-dlp -x --audio-quality 0 --audio-format opus'
 
+# compile latex document to pdf
+alias lm='latexmk -pdf -pvc -output-directory=output main.tex'
+
 # git
 alias gs='git status'
 alias gd='git diff'
